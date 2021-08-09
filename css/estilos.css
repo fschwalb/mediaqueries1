@@ -1,0 +1,268 @@
+/*====================================*/
+/*============= IMPORTS ==============*/
+/*====================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Quicksand:wght@300;400;700&family=Raleway:ital,wght@0,100;0,300;0,400;0,600;0,700;0,800;1,400&display=swap');
+
+/*
+font-family: 'DM Sans';
+font-family: 'Quicksand';
+font-family: 'Raleway';
+*/
+
+:root {
+    --fuenteHeading: 'Quicksand', sans-serif;
+    --fuenteSubtitle: 'DM Sans', sans-serif;
+    --fuenteParagraph: 'Raleway', sans-serif;
+
+    --colorPrim: #14FFEC;
+    --colorSec: #0D7377;
+    --whiteCustom: #fafafa;
+    --greyCustom: #3d3d3d;
+    --blackCustom: #212121;
+    --paletteGreen: #65ad00;
+    --paletteViolet: #4800AD;
+    --paletteRed: #AD000E;
+}
+html {
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: var(--fuenteParagraph);
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+
+/*====================================*/
+/*============ GLOBALES ==============*/
+/*====================================*/
+
+
+.contenedor {
+    width: min(90%, 120rem);
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+}
+h1, h2, h3, h4 {
+    font-family: var(--fuenteHeading);
+    line-height: 1.2;
+}
+h1 {
+    font-size: 6rem;
+}
+h2 {
+    font-size: 4rem;
+}
+h3 {
+    font-size: 3.2rem;
+}
+h4 {
+    font-size: 2.8rem;
+}
+img {
+    max-width: 100%;
+}
+p {
+    font-family: var(--fuenteParagraph);
+}
+
+
+/*====================================*/
+/*=========== UTILIDADES =============*/
+/*====================================*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*====================================*/
+/*============= HEADER ===============*/
+/*====================================*/
+
+/* Navbar */
+
+.header {
+    background-color: var(--blackCustom);
+    height: 100vh;
+    padding: 2rem 5rem 0 5rem;
+}
+
+.bar {
+    height: 7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin: 1rem;
+}
+
+.logo__link {
+    color: var(--whiteCustom);
+    font-size: 3rem;
+    font-style: italic;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    border: 1px solid var(--whiteCustom);
+    border-radius: 50%;
+    padding: 1rem;
+}
+
+.logo__link:hover {
+    color: var(--blackCustom);
+    background-color: var(--whiteCustom);
+}
+
+.nav-bg {
+    background-color: var(--blackCustom);
+}
+
+.navbar {
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar__item {
+    margin-left: 2rem;
+    color: var(--whiteCustom);
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+.navbar__item:hover {
+    color: var(--colorPrim);
+}
+
+/* Inicio */
+
+.home {
+    padding: 20rem 0 1rem 1rem;
+}
+
+.nameTitle {
+    width: 60rem;
+    color: var(--whiteCustom);
+    border-bottom: 2px solid var(--colorPrim);
+    padding-bottom: 2rem;
+}
+
+.job {
+    font-family: var(--fuenteSubtitle);
+    color: var(--greyCustom);
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    font-style: italic;
+}
+
+.cta {
+    margin: 5rem 0 18rem 0;
+    display: inline-block;
+    width: 15rem;
+    padding: 1rem;
+    color: var(--colorPrim);
+    font-family: var(--fuenteHeading);
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    background-color: var(--blackCustom);
+    border: 1px solid var(--colorPrim);
+    border-radius: 1rem;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+.cta:hover {
+    cursor: pointer;
+    background-color: var(--colorPrim);
+    color: var(--blackCustom);
+}
+
+
+/*====================================*/
+/*============== MAIN ================*/
+/*====================================*/
+
+
+.main {
+    background-color: var(--whiteCustom);
+    height: 100vh;
+    padding: 2rem 5rem 0 5rem;
+}
+
+.about__title {
+    font-family: var(--fuenteSubtitle);
+    margin-top: 1rem;
+}
+
+.about__text {
+    font-family: var(--fuenteParagraph);
+    margin-top: 2rem;
+}
+
+.fa-arrow-circle-up {
+    display: flex;
+    justify-content: flex-end;
+    color: var(--greyCustom);
+    font-size: 3rem;
+    margin-top: 2rem;
+}
+
+
+/*====================================*/
+/*========== MEDIA QUERIES ===========*/
+/*====================================*/
+
+@media (max-width: 719px) {
+    .header {
+        width: 100%;
+    }
+
+    .bar {
+        display: block;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .home {
+        width: 100%;
+        padding: 20rem 0 1rem 1rem;
+    }
+
+    .nameTitle {
+        width: 100%;
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    .job {
+        text-align: center;
+    }
+    
+    .cta {
+        display: block;
+        margin: 8rem auto 18rem auto;
+    }
+}
